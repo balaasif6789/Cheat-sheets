@@ -36,5 +36,13 @@ From the manual:
 
     -F fs
     –field-separator fs Use fs for the input field separator (the value of the FS predefined variable).
+    
+    
+    
+*********************************************************************************************************************
+diff <(ls *.txt) <(ls *.*.txt)
 
+will check difference of output returned between the 2 commands
+1st ls will return all *.txt files  such as subdomains.txt
+2nd ls will return all *.*.txt files such as facebook.com.txt
 
