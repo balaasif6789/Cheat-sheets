@@ -49,5 +49,11 @@ will check difference of output returned between the 2 commands
 
 ***********************************************************************************************************************
 
-for ips in  $(cat npci_ips_list | tail -n+4); do bash testssl.sh $ips; done
+The following command enables me to start scanning from in between. 
+Eg. Lets say I have already scanned the 1st 4 IP addresses and for some reason I had to stop the scan. 
+I can then start scanning from the 5th IP without having to remove any IP Addresses that I have already scanned from the original 
+file. 
+
+
+for ips in  $(cat ips_list | tail -n+4); do bash testssl.sh $ips; done
 
