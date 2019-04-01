@@ -46,3 +46,8 @@ will check difference of output returned between the 2 commands
 1st ls will return all *.txt files  such as subdomains.txt
 2nd ls will return all *.*.txt files such as facebook.com.txt
 
+
+***********************************************************************************************************************
+
+for ips in  $(cat npci_ips_list | tail -n+4); do bash testssl.sh $ips; done
+
