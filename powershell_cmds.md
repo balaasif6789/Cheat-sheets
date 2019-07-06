@@ -1,3 +1,9 @@
+Check if ports are enabled. USeful when telnet or cmd is disabled 
+
+<b>New-Object System.Net.Sockets.TcpClient("192.168.0.2", 80) <b>
+
+*****************************************************************************************
+
 function Get-ByOwner
  {
    Get-ChildItem -recurse C:\ | get-acl | where {$_.Owner -match $args[0]} 
@@ -5,7 +11,7 @@ function Get-ByOwner
 
 PS C:\> Get-ByOwner JackFrost
 
-
+*****************************************************************************************
 
 WMI objects
 
