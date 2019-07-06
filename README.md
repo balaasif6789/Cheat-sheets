@@ -1,6 +1,4 @@
-Bash one liners
-Powershell commands
 
-
-Check if ports are enabled. USeful when telnet or cmd is disabled 
-New-Object System.Net.Sockets.TcpClient("192.168.0.2", 80)
+https://github.com/OlivierLaflamme/Cheatsheet-God <br>
+https://github.com/coreb1t/awesome-pentest-cheat-sheets <br>
+https://github.com/Snifer/security-cheatsheets <br>
