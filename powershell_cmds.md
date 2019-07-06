@@ -1,6 +1,6 @@
 Check if ports are enabled. USeful when telnet or cmd is disabled 
 
-<b>New-Object System.Net.Sockets.TcpClient("192.168.0.2", 80) <b>
+<b>New-Object System.Net.Sockets.TcpClient("192.168.0.2", 80) </b>
 
 *****************************************************************************************
 
