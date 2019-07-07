@@ -57,3 +57,16 @@ file.
 
 for ips in  $(cat ips_list | tail -n+4); do bash testssl.sh $ips; done
 
+
+**********************************************************************************************************************
+
+ls *.txt |sed 's/\.txt//'
+
+
+for domains in $(ls Sublist3r/*.*.txt |sed 's/\.txt//'| cut -d "/" -f2 ); python takeover.py -d $domains -w $domains.txt ; done
+
+
+
+ for domains in $(ls ../Sublist3r/*.*.txt |sed 's/\.txt//'| cut -d "/" -f 3 ); do python takeover.py -d $domains -w ../Sublist3r/$domains.txt ; done  >>takeover
+
+
