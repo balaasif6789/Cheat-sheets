@@ -1,5 +1,5 @@
 
-kali@kali:~/Pentester Academy/Python for Pentesters$ for f in $(ls *.m4v); do nf=$(echo $f | awk -F: '{st=index($0,"_");print substr($0,st+1)}'| cut -d "." -f 1); ef=$(echo $f | awk -F: '{st=index($0,"_");print substr($0,0,2)}'); nf=$nf"_"$ef.m4v;echo $nf; mv $f $nf ;  done 
+<b>kali@kali:~/Pentester Academy/Python for Pentesters$ for f in $(ls *.m4v); do nf=$(echo $f | awk -F: '{st=index($0,"_");print substr($0,st+1)}'| cut -d "." -f 1); ef=$(echo $f | awk -F: '{st=index($0,"_");print substr($0,0,2)}'); nf=$nf"_"$ef.m4v;echo $nf; mv $f $nf ;  done  </b>
 
 
 IP files order: 
