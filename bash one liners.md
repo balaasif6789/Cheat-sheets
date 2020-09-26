@@ -1,4 +1,27 @@
 
+kali@kali:~/Pentester Academy/Python for Pentesters$ for f in $(ls *.m4v); do nf=$(echo $f | awk -F: '{st=index($0,"_");print substr($0,st+1)}'| cut -d "." -f 1); ef=$(echo $f | awk -F: '{st=index($0,"_");print substr($0,0,2)}'); nf=$nf"_"$ef.m4v;echo $nf; mv $f $nf ;  done 
+
+
+IP files order: 
+01_Module1_sometext.m4v
+01_Module2.sometext.m4v
+...
+02_Module1.sometext.m4v
+
+OP files order:
+Module1.sometext_01.m4v
+Module1.sometext_02.m4v
+...
+Module2.sometext_01.m4v
+
+
+The 1st awk extracts the text Module1_sometext.m4v using the first occurrence of "_" as the delimiter. The output is then cut to remove the m4v using the "." delimiter. this is stored in variable $nf  
+
+The 2nd awk extracts the preceding number from each of the files names.i.e. 01,02 and so on. This is stored in $ef/
+The two variable are combined to create a new filename.
+
+
+************************************************************************************************
 only those lines which start with a . 
 cat output.txt | grep "^\." | cut -d '.' -f 2- | cut -f 1 > bugcrowd_domains_final
 
